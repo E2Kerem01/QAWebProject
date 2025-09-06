@@ -91,5 +91,6 @@ public class BasePage {
     protected void closeAndBack(String original) {
         driver.close();
         driver.switchTo().window(original);
+
     }
 }
