@@ -1,10 +1,10 @@
-# QA Web Case - Insider Test Automation Project
+# QA Web Case - Test Automation Project
 
-Bu proje, Insider şirketinin web sitesi için Selenium WebDriver kullanılarak geliştirilmiş end-to-end test otomasyon projesidir.
+Bu proje, web sitesi için Selenium WebDriver kullanılarak geliştirilmiş end-to-end test otomasyon projesidir.
 
 ## 📋 Proje Hakkında
 
-Bu test projesi, Insider'ın kariyer sayfalarını test etmek için tasarlanmıştır. Test senaryoları şunları kapsar:
+Bu test projesi, senaryoları şunları kapsar:
 - Ana sayfa doğrulaması
 - Kariyer sayfası kontrolleri
 - Kalite Güvencesi sayfası testleri
@@ -88,77 +88,7 @@ mvn test -Dheadless=true
 mvn test -DholdOnExitSec=30
 ```
 
-## 🧪 Test Senaryoları
-
-### 1. Ana Sayfa Testi (`homePageTest`)
-- Insider ana sayfasının yüklenmesini doğrular
-- Ana sayfa ikonunun görünürlüğünü kontrol eder
-- Sayfa başlığının doğruluğunu kontrol eder
-- Şirket menüsüne tıklar ve Kariyer sayfasına yönlendirir
-
-### 2. Kariyer Sayfası Testi (`careerPageTest`)
-- Kariyer sayfası URL'sini doğrular
-- "Our Story" bölümünü kontrol eder
-- "Find your calling" takım bölümünü doğrular
-- "Our Locations" bölümünü ve 25 lokasyon olduğunu kontrol eder
-- "Life at Insider" bölümünü doğrular
-
-### 3. Kalite Güvencesi Sayfası Testi (`qualityAssurancePageTest`)
-- Kalite Güvencesi sayfası URL'sini doğrular
-- Sayfa başlığını kontrol eder
-- "See all QA jobs" butonuna tıklar
-
-### 4. Açık Pozisyonlar Sayfası Testi (`openPositionPageTest`)
-- Açık pozisyonlar sayfası URL'sini doğrular
-
-## 🔧 Özellikler
-
-- **Page Object Model**: Kod tekrarını azaltır ve bakımı kolaylaştırır
-- **Çoklu Tarayıcı Desteği**: Chrome, Firefox ve Edge
-- **Headless Mod**: CI/CD ortamları için uygun
-- **Otomatik Bekleme**: WebDriverWait ile güvenilir testler
-- **Assertion Kütüphanesi**: AssertJ ile güçlü doğrulamalar
-- **Test Loglama**: TestLogger ile detaylı loglar
-- **Cookie Yönetimi**: Otomatik cookie kabul etme
 
 ## 📊 Test Raporları
 
 Test sonuçları `target/surefire-reports/` dizininde oluşturulur.
-
-## 🐛 Sorun Giderme
-
-### Yaygın Sorunlar:
-
-1. **Tarayıcı sürücü sorunları**: En güncel WebDriver sürücülerini kullandığınızdan emin olun
-2. **Timeout sorunları**: `BasePage.java` dosyasındaki wait sürelerini artırabilirsiniz
-3. **Element bulunamadı**: Sayfa yapısı değişmiş olabilir, locator'ları güncelleyin
-
-### Debug Modu:
-```bash
-mvn test -DholdOnExitSec=60
-```
-
-## 🤝 Katkıda Bulunma
-
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/AmazingFeature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Add some AmazingFeature'`)
-4. Branch'inizi push edin (`git push origin feature/AmazingFeature`)
-5. Pull Request oluşturun
-
-## 📝 Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır.
-
-## 👨‍💻 Geliştirici
-
-**Kerem Metin**
-- GitHub: [@E2Kerem01](https://github.com/E2Kerem01)
-
-## 📞 İletişim
-
-Herhangi bir sorunuz veya öneriniz için issue açabilir veya iletişime geçebilirsiniz.
-
----
-
-**Not**: Bu proje eğitim amaçlı geliştirilmiştir ve Insider şirketinin resmi test projesi değildir.
