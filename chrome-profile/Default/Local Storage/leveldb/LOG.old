@@ -1,0 +1,6 @@
+2025/09/06-23:36:35.595 84e8 Reusing MANIFEST C:\Users\kmeti\Desktop\qa-web-case\chrome-profile\Default\Local Storage\leveldb/MANIFEST-000001
+2025/09/06-23:36:35.599 84e8 Recovering log #7
+2025/09/06-23:36:35.600 84e8 Reusing old log C:\Users\kmeti\Desktop\qa-web-case\chrome-profile\Default\Local Storage\leveldb/000007.log 
+2025/09/06-23:37:01.523 b658 Level-0 table #10: started
+2025/09/06-23:37:01.527 b658 Level-0 table #10: 15401 bytes OK
+2025/09/06-23:37:01.531 b658 Delete type=0 #7

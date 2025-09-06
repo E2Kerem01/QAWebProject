@@ -1,0 +1,10 @@
+<suite name="Insider Case Suite">
+    <listeners>
+        <listener class-name="com.qa.listeners.TestLogger"/>
+    </listeners>
+    <test name="E2E">
+        <classes>
+            <class name="com.qa.InsiderCaseTest"/>
+        </classes>
+    </test>
+</suite>
