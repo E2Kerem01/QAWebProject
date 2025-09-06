@@ -44,7 +44,11 @@ public class InsiderCaseTest extends BaseTest {
     @Test(priority = 3)
     public void openPositionPageTest(){
         OpenPositionsPage openPositionsPage = new OpenPositionsPage(driver);
-        openPositionsPage.checkOpenPositionsUrl();
+        openPositionsPage.checkOpenPositionsUrlandTitle();
+        openPositionsPage.checkSectionOfFilter();
+        openPositionsPage.ensureDepartmentQA();
+        openPositionsPage.selectLocationIstanbul();
+        openPositionsPage.tinyScroll();
 
     }
 

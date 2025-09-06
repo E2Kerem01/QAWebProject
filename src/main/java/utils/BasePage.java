@@ -72,21 +72,28 @@ public class BasePage {
         driver.navigate().to(url);
     }
 
-    protected void scrollBy(int px){ ((org.openqa.selenium.JavascriptExecutor)driver)
-            .executeScript("window.scrollBy(0, arguments[0]);", px); }
-
-
-    protected String switchToNewTab(){
-        String orig = driver.getWindowHandle();
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(d -> d.getWindowHandles().size() > 1);
-        for (String h : driver.getWindowHandles())
-            if (!h.equals(orig)) { driver.switchTo().window(h); break; }
-        return orig; // geri dönmek için lazım
+    protected void scrollBy(int px) {
+        ((org.openqa.selenium.JavascriptExecutor) driver)
+                .executeScript("window.scrollBy(0, arguments[0]);", px);
     }
 
-    protected void closeAndBack(String originalHandle){
+    protected String switchToNewTab() {
+        String original = driver.getWindowHandle();
+        for (String h : driver.getWindowHandles()) {
+            if (!h.equals(original)) {
+                driver.switchTo().window(h);
+                return original; // geri döneceğimiz handle
+            }
+        }
+        throw new AssertionError("Yeni sekme açılmadı");
+    }
+
+    protected void closeAndBack(String original) {
         driver.close();
-        driver.switchTo().window(originalHandle);
+        driver.switchTo().window(original);
+    }
+
+    protected void waitForDisplayedAndEnabledNow() {
+
     }
 }
