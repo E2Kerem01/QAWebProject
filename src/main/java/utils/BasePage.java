@@ -77,20 +77,43 @@ public class BasePage {
                 .executeScript("window.scrollBy(0, arguments[0]);", px);
     }
 
-    protected String switchToNewTab() {
-        String original = driver.getWindowHandle();
-        for (String h : driver.getWindowHandles()) {
-            if (!h.equals(original)) {
-                driver.switchTo().window(h);
-                return original; // geri döneceğimiz handle
+    protected String clickAndSwitch(WebElement link) {
+        String back = driver.getWindowHandle();
+        int before  = driver.getWindowHandles().size();
+        link.click();
+        new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(5))
+                .until(d -> d.getWindowHandles().size() > before);
+        for (String h : driver.getWindowHandles()) if (!h.equals(back)) { driver.switchTo().window(h); break; }
+        return back;
+    }
+
+
+    protected void closeTabAndBack(String back) {
+        driver.close();
+        driver.switchTo().window(back);
+    }
+
+    protected void assertAllTexts(By by, String expected, boolean exactMatch) {
+        var els = driver.findElements(by);
+        if (els.isEmpty()) throw new AssertionError("Hiç eleman bulunamadı: " + by);
+
+        for (int i = 0; i < els.size(); i++) {
+            String t = els.get(i).getText().trim();
+            if (exactMatch) {
+                if (!t.equalsIgnoreCase(expected)) {
+                    throw new AssertionError("#" + (i+1) + " beklenen: '" + expected + "', bulunan: '" + t + "'");
+                }
+            } else {
+                if (!t.toLowerCase().contains(expected.toLowerCase())) {
+                    throw new AssertionError("#" + (i+1) + " '" + expected + "' içermiyor. Metin: '" + t + "'");
+                }
             }
         }
-        throw new AssertionError("Yeni sekme açılmadı");
     }
 
-    protected void closeAndBack(String original) {
-        driver.close();
-        driver.switchTo().window(original);
-
+    protected void waitSec(int sec) {
+        try { Thread.sleep(sec * 1000L); } catch (InterruptedException ignored) {}
     }
+
+
 }

@@ -47,26 +47,26 @@ public class BaseTest {
 
         driver.get(BASE_URL);
         try {
-            By cookieBtn = By.cssSelector("#wt-cli-accept-all-btn, [id*='wt-cli-accept-all-btn']");
+            By cookieBtn = By.cssSelector(".wt-cli-accept-all-btn");
             new WebDriverWait(driver, Duration.ofSeconds(5))
                     .until(ExpectedConditions.elementToBeClickable(cookieBtn)).click();
         } catch (Exception ignore) {}
     }
 
-    @AfterClass(alwaysRun = true)
-    public void tearDownClass() {
-        if (driver != null) {
-            // GUI'de görmek için: -DholdOnExitSec=10 ver
-            long hold = Long.parseLong(System.getProperty("holdOnExitSec", "10"));
-            // headless ise beklemenin pek anlamı yok, istersen atla
-            if (hold > 0 && !Boolean.parseBoolean(System.getProperty("headless","false"))) {
-                try { Thread.sleep(hold * 1000L); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
-            }
-            driver.quit();
-        }
-    }
 //    @AfterClass(alwaysRun = true)
 //    public void tearDownClass() {
-//        if (driver != null) driver.quit();
+//        if (driver != null) {
+//            // GUI'de görmek için: -DholdOnExitSec=10 ver
+//            long hold = Long.parseLong(System.getProperty("holdOnExitSec", "10"));
+//            // headless ise beklemenin pek anlamı yok, istersen atla
+//            if (hold > 0 && !Boolean.parseBoolean(System.getProperty("headless","false"))) {
+//                try { Thread.sleep(hold * 1000L); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
+//            }
+//            driver.quit();
+//        }
 //    }
+    @AfterClass(alwaysRun = true)
+    public void tearDownClass() {
+        if (driver != null) driver.quit();
+    }
 }
