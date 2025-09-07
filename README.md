@@ -92,3 +92,5 @@ mvn test -DholdOnExitSec=30
 ## 📊 Test Raporları
 
 Test sonuçları `target/surefire-reports/` dizininde oluşturulur.
+<img width="1846" height="383" alt="image" src="https://github.com/user-attachments/assets/cedbe342-b2d8-431c-9cd6-530547d911ab" />
+
