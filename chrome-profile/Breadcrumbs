@@ -1,33 +1,59 @@
-0:00:10 Tab1 PageLoad
-0:00:10 Tab1 StartNav23 #renderer-script #auto_subframe
-0:00:10 Tab1 FinishNav23
-0:00:10 Tab1 PageLoad
-0:00:10 Tab1 StartNav24 #renderer-script #auto_subframe
-0:00:10 Tab1 FinishNav24
-0:00:10 Tab1 PageLoad
-0:00:11 Tab1 PageLoad
-0:00:11 Tab1 StartNav25 #renderer-user #link
-0:00:11 Tab1 RemoveInfobar73
-0:00:11 Tab1 FinishNav25
-0:00:11 Tab1 AddInfobar73
-0:00:11 Tab1 StartNav26 #renderer-script #auto_subframe
-0:00:11 Tab1 FinishNav26
-0:00:11 Tab1 PageLoad
-0:00:11 Tab1 StartNav27 #renderer-script #auto_subframe
-0:00:11 Tab1 FinishNav27
-0:00:11 Tab1 PageLoad
-0:00:11 Tab1 StartNav28 #renderer-script #auto_subframe
-0:00:11 Tab1 FinishNav28
-0:00:11 Tab1 PageLoad
-0:00:11 Tab1 StartNav29 #renderer-script #auto_subframe
-0:00:11 Tab1 FinishNav29
-0:00:11 Tab1 PageLoad
-0:00:11 Tab1 StartNav30 #renderer-script #auto_subframe
-0:00:11 Tab1 FinishNav30
-0:00:11 Tab1 PageLoad
-0:00:11 Tab1 StartNav31 #renderer-script #auto_subframe
-0:00:11 Tab1 FinishNav31
-0:00:11 Tab1 PageLoad
-0:00:11 Tab1 PageLoad
-0:00:21 Widget Closed: StatusBubble
-0:00:23 Browser1 Close Tab1 at 0
+0:00:25 Tab1 StartNav15 #renderer-script #auto_subframe
+0:00:25 Tab1 FinishNav15
+0:00:25 Tab1 PageLoad
+0:00:25 Tab1 StartNav16 #renderer-script #auto_subframe
+0:00:25 Tab1 FinishNav16
+0:00:25 Tab1 PageLoad
+0:00:25 Tab1 StartNav17 #renderer-script #auto_subframe
+0:00:25 Tab1 FinishNav17
+0:00:25 Tab1 PageLoad
+0:00:25 Tab1 PageLoad
+0:00:25 Tab1 StartNav18 #typed
+0:00:25 Media.Hidden
+0:00:25 Tab1 RemoveInfobar73
+0:00:25 Tab1 FinishNav18
+0:00:25 Tab1 StartNav19 #renderer-script #auto_subframe
+0:00:25 Tab1 FinishNav19
+0:00:25 Tab1 PageLoad
+0:00:26 Tab1 StartNav20 #renderer-script #auto_subframe
+0:00:26 Tab1 FinishNav20
+0:00:26 Tab1 PageLoad
+0:00:26 Tab1 StartNav21 #renderer-script #auto_subframe
+0:00:26 Tab1 FinishNav21
+0:00:26 Tab1 PageLoad
+0:00:26 Tab1 StartNav22 #renderer-script #auto_subframe
+0:00:26 Tab1 FinishNav22
+0:00:26 Tab1 PageLoad
+0:00:26 Tab1 AddInfobar73
+0:00:26 Tab1 StartNav23 #renderer-script #auto_subframe
+0:00:26 Tab1 FinishNav23
+0:00:26 Tab1 PageLoad
+0:00:26 Tab1 StartNav24 #renderer-script #auto_subframe
+0:00:26 Tab1 FinishNav24
+0:00:26 Tab1 PageLoad
+0:00:26 Tab1 PageLoad
+0:00:26 Tab1 StartNav25 #renderer-user #link
+0:00:26 Tab1 RemoveInfobar73
+0:00:26 Tab1 FinishNav25
+0:00:26 Tab1 AddInfobar73
+0:00:26 Tab1 StartNav26 #renderer-script #auto_subframe
+0:00:26 Tab1 FinishNav26
+0:00:26 Tab1 PageLoad
+0:00:26 Tab1 StartNav27 #renderer-script #auto_subframe
+0:00:26 Tab1 FinishNav27
+0:00:26 Tab1 PageLoad
+0:00:26 Tab1 StartNav28 #renderer-script #auto_subframe
+0:00:26 Tab1 FinishNav28
+0:00:26 Tab1 PageLoad
+0:00:26 Tab1 StartNav29 #renderer-script #auto_subframe
+0:00:26 Tab1 FinishNav29
+0:00:26 Tab1 PageLoad
+0:00:26 Tab1 StartNav30 #renderer-script #auto_subframe
+0:00:26 Tab1 FinishNav30
+0:00:26 Tab1 PageLoad
+0:00:26 Tab1 StartNav31 #renderer-script #auto_subframe
+0:00:26 Tab1 FinishNav31
+0:00:26 Tab1 PageLoad
+0:00:27 Tab1 PageLoad
+0:00:36 Widget Closed: StatusBubble
+0:00:38 Browser1 Close Tab1 at 0

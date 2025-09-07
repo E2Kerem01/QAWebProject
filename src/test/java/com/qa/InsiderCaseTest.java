@@ -49,6 +49,8 @@ public class InsiderCaseTest extends BaseTest {
         openPositionsPage.ensureDepartmentQA();
         openPositionsPage.selectLocationIstanbul();
         openPositionsPage.tinyScroll();
+        openPositionsPage.openAllRolesAndVerifyLever();
+
 
     }
 

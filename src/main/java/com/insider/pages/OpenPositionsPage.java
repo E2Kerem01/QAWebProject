@@ -13,6 +13,7 @@ public class OpenPositionsPage extends BasePage {
     public By filterOfLocation = By.cssSelector("span#select2-filter-by-location-container");
     public By qualityAssuranceselected = By.cssSelector("ul#select2-filter-by-department-results > li:nth-of-type(17)");
     public By locationSelected = By.cssSelector("ul#select2-filter-by-location-results > li:nth-of-type(11)");
+    public By viewRoleInCard = By.cssSelector("#jobs-list [data-location='istanbul-turkiye']");
     //Expected
     public String expectedOpenPositionsPageTitle = "All open positions";
 
@@ -46,4 +47,16 @@ public class OpenPositionsPage extends BasePage {
 
     public OpenPositionsPage tinyScroll(){
         scrollBy(300); return this; }
+
+
+    public OpenPositionsPage openAllRolesAndVerifyLever() {
+        for (int i = 0; i < driver.findElements(viewRoleInCard).size(); i++) {
+            var links = driver.findElements(viewRoleInCard);
+            links.get(i).click();
+            String prev = switchToNewTab();
+            waitUrlContains("lever.co");
+            closeAndBack(prev);
+        }
+        return this;
+    }
 }
